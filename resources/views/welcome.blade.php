@@ -24,16 +24,17 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach( $ujian as $u)
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mahasiswa</td>
-                            <td><img src="http://placehold.it/40x40" class="rounded-circle" alt="Cinque Terre"></td>
-                            <td>15639876</td>
-                            <td>8a</td>
-                            <td>8</td>
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$u->nama}}</td>
+                            <td><img src="img/ujian/{{$u->foto}}" class="rounded-circle" alt="Cinque Terre"></td>
+                            <td>{{$u->NPM}}</td>
+                            <td>{{$u->kelas}}</td>
+                            <td>{{$u->semester}}</td>
                             <td>
-                                <a class="btn btn-info" href="">Edit</a>
-                                <a class="btn btn-danger" href="">Hapus</a>
+                                <a class="btn btn-info" href="/edit/{{$u->id}}">Edit</a>
+                                <a class="btn btn-danger" href="/hapus/{{$u->id}}">Hapus</a>
                             </td>
                         </tr>
                     </tbody>
