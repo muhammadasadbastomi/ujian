@@ -33,8 +33,8 @@
                             <td>{{$u->kelas}}</td>
                             <td>{{$u->semester}}</td>
                             <td>
-                                <a class="btn btn-info" href="/edit/{{$u->id}}">Edit</a>
-                                <a class="btn btn-danger" href="/hapus/{{$u->id}}">Hapus</a>
+                                <a class="btn btn-info" href="edit/{{$u->id}}">Edit</a>
+                                <a class="btn btn-danger" href="hapus/{{$u->id}}">Hapus</a>
                             </td>
                         </tr>
                         @endforeach
