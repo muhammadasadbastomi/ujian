@@ -18,10 +18,6 @@ class UjianController extends Controller
         return view('edit',compact('ujian'));
     }
 
-    public function createIndex(){
-        return view('tambah');
-    }
-
     public function create(Request $req){
         $ujian = ujian::create($req->all());
 
