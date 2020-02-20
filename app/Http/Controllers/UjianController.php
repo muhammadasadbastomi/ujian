@@ -21,6 +21,7 @@ class UjianController extends Controller
     public function create(Request $req){
         $ujian = ujian::create($req->all());
 
+        // comment this code if foto not used
         $ujian_id = $ujian->id;
         $setuuid = ujian::findOrFail($ujian_id);
         if($req->foto != null)
@@ -44,6 +45,7 @@ class UjianController extends Controller
 
         $ujian->fill($req->all())->save();
 
+        // comment this code if foto not used
         if($req->foto != null){
                 $FotoExt  = $req->foto->getClientOriginalExtension();
                 $FotoName = $req->ujian_id;
