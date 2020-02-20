@@ -12,27 +12,27 @@
                 </div>
                 <div class="card-body">
                 <table class="table table-striped">
-`                    <thead>
+                    <thead>
                         <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Nama</th>
-                            <th scope="col">Foto</th>
-                            <th scope="col">NPM</th>
-                            <th scope="col">Kelas</th>
-                            <th scope="col">Semester</th>
-                            <th scope="col">Aksi</th>
+                            <th scope="col" class="text-center">No</th>
+                            <th scope="col" class="text-center">Nama</th>
+                            <th scope="col" class="text-center">Foto</th>
+                            <th scope="col" class="text-center">NPM</th>
+                            <th scope="col" class="text-center">Kelas</th>
+                            <th scope="col" class="text-center">Semester</th>
+                            <th scope="col" class="text-center">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach( $ujian as $u)
                         <tr>
-                            <td>{{$loop->iteration}}</td>
-                            <td>{{$u->nama}}</td>
-                            <td><img src="img/ujian/{{$u->foto}}" width="40" class="rounded-circle" alt="Cinque Terre"></td>
-                            <td>{{$u->NPM}}</td>
-                            <td>{{$u->kelas}}</td>
-                            <td>{{$u->semester}}</td>
-                            <td>
+                            <td class="text-center">{{$loop->iteration}}</td>
+                            <td class="text-center">{{$u->nama}}</td>
+                            <td class="text-center"><img src="img/ujian/{{$u->foto}}" width="40" class="rounded-circle" alt="Cinque Terre"></td>
+                            <td class="text-center">{{$u->NPM}}</td>
+                            <td class="text-center">{{$u->kelas}}</td>
+                            <td class="text-center">{{$u->semester}}</td>
+                            <td class="text-center">
                                 <a class="btn btn-info" href="edit/{{$u->id}}">Edit</a>
                                 <a class="btn btn-danger" href="hapus/{{$u->id}}">Hapus</a>
                             </td>
