@@ -14,7 +14,7 @@
 
 Route::get('/','UjianController@get')
 ->name('ujian_index');
-Route::post('/tambah','UjianController@create')
+Route::post('/','UjianController@create')
 ->name('ujian_tambah');
 Route::get('/edit/{id}','UjianController@find')
 ->name('ujian_edit');
