@@ -37,6 +37,7 @@
                                 <a class="btn btn-danger" href="/hapus/{{$u->id}}">Hapus</a>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>`
                 </div>
