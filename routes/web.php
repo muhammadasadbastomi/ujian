@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/','UjianController@ujian_index')
+->name('ujian_index');
+Route::post('/tambah','UjianController@create')
+->name('ujian_tambah');
+Route::get('/edit/{id}','UjianController@find')
+->name('ujian_edit');
+Route::put('/edit/{id}','UjianController@ujian_update')
+->name('ujian_update');
+Route::get('/hapus/{id}','UjianController@ujian_hapus')
+->name('ujian_hapus');
