@@ -22,3 +22,5 @@ Route::put('/edit/{id}','UjianController@update')
 ->name('ujian_update');
 Route::get('/hapus/{id}','UjianController@delete')
 ->name('ujian_hapus');
+Route::get('/cetak','UjianController@cetak')
+->name('cetak');

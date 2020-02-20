@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use App\Ujian;
+use PDF;
 
 class UjianController extends Controller
 {
@@ -74,4 +75,11 @@ class UjianController extends Controller
 
         return redirect(route('ujian_index'));
     }
+
+    public function cetak(){
+            $ujian = ujian::all();
+            $pdf =PDF::loadView('cetak', ['ujian'=>$ujian]);
+            $pdf->setPaper('a4', 'potrait');
+            return $pdf->stream('Data ujian.pdf');
+        }
 }
