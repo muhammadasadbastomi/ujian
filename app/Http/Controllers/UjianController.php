@@ -58,7 +58,7 @@ class UjianController extends Controller
 
         $ujian->update();
 
-        return view('welcome');
+        return redirect(route('ujian_index'));
     }
 
     public function delete($id){
