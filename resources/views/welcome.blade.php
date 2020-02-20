@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card" >
-                <div class="card-header">Data -  
+                <div class="card-header">Data -
                     <div class="text-right">
-                        <a href="" class="btn btn-primary"> cetak data</a>    
+                        <a href="" class="btn btn-primary"> cetak data</a>
                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">+ tambah data</button>                    </div>
                 </div>
                 <div class="card-body">
@@ -31,9 +31,9 @@
                             <td>15639876</td>
                             <td>8a</td>
                             <td>8</td>
-                            <td> 
+                            <td>
                                 <a class="btn btn-info" href="">Edit</a>
-                                <a class="btn btn-danger" href="">Hapus</a>  
+                                <a class="btn btn-danger" href="">Hapus</a>
                             </td>
                         </tr>
                     </tbody>
@@ -56,11 +56,12 @@
       </div>
       <div class="modal-body">
       <form action="" method="post" enctype="multipart/form-data">
+            {{ csrf_field() }}
             <div class="form-group"><label for="nama" class="form-control-label">Nama</label><input type="text" name="nama" id="nama" placeholder="nama" class="form-control"></div>
             <div class="form-group"><label for="nama" class="form-control-label">NPM</label><input type="text" name="NPM" id="NPM" placeholder="NPM" class="form-control"></div>
             <div class="form-group"><label for="nama" class="form-control-label">Foto</label><input type="file" name="foto" id="foto" placeholder="foto" class="form-control"></div>
             <div class="form-group"><label for="nama" class="form-control-label">kelas</label><input type="number" name="kelas" id="kelas" placeholder="kelas" class="form-control"></div>
-            <div class="form-group"><label for="nama" class="form-control-label">Semester</label><input type="number" name="Semester" id="Semester" placeholder="Semester" class="form-control"></div>
+            <div class="form-group"><label for="nama" class="form-control-label">Semester</label><input type="number" name="semester" id="semester" placeholder="semester" class="form-control"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
