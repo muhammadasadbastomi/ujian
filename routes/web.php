@@ -12,13 +12,13 @@
 */
 
 
-Route::get('/','UjianController@ujian_index')
+Route::get('/','UjianController@get')
 ->name('ujian_index');
 Route::post('/tambah','UjianController@create')
 ->name('ujian_tambah');
 Route::get('/edit/{id}','UjianController@find')
 ->name('ujian_edit');
-Route::put('/edit/{id}','UjianController@ujian_update')
+Route::put('/edit/{id}','UjianController@update')
 ->name('ujian_update');
-Route::get('/hapus/{id}','UjianController@ujian_hapus')
+Route::get('/hapus/{id}','UjianController@hapus')
 ->name('ujian_hapus');
