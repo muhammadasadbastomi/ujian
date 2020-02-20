@@ -28,7 +28,7 @@
                         <tr>
                             <td>{{$loop->iteration}}</td>
                             <td>{{$u->nama}}</td>
-                            <td><img src="img/ujian/{{$u->foto}}" class="rounded-circle" alt="Cinque Terre"></td>
+                            <td><img src="img/ujian/{{$u->foto}}" width="40" class="rounded-circle" alt="Cinque Terre"></td>
                             <td>{{$u->NPM}}</td>
                             <td>{{$u->kelas}}</td>
                             <td>{{$u->semester}}</td>
