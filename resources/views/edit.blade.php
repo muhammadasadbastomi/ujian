@@ -6,11 +6,12 @@
         <div class="col-md-12">
             <div class="card" >
                 <div class="card-header">
-                    Edit Data  
+                    Edit Data
                 </div>
                 <div class="card-body">
                 <form action="" method="post" enctype="multipart/form-data">
                 @csrf
+                {{ method_field('PUT') }}
                         <div class="form-group"><label for="nama" class="form-control-label">Nama</label><input type="text" name="nama" id="nama" placeholder="nama" class="form-control" value="{{$ujian->nama}}"></div>
                         <div class="form-group"><label for="nama" class="form-control-label">NPM</label><input type="text" name="NPM" id="NPM" placeholder="NPM" class="form-control" value="{{$ujian->NPM}}"></div>
                         <div class="form-group"><label for="nama" class="form-control-label">Foto</label><input type="file" name="foto" id="foto" placeholder="foto" class="form-control" value="{{$ujian->foto}}"></div>
