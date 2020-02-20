@@ -9,7 +9,7 @@ use App\Ujian;
 class UjianController extends Controller
 {
     public function get(){
-        $ujian = ujian::all;
+        $ujian = ujian::all();
         return view('welcome',compact('ujian'));
     }
 
