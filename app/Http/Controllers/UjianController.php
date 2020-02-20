@@ -37,7 +37,7 @@ class UjianController extends Controller
         }
         $setuuid->update();
 
-        return view('welcome');
+        return redirect(route('ujian_index'));
     }
 
     public function update($id, Request $req){
@@ -72,6 +72,6 @@ class UjianController extends Controller
         }
         $delete = $ujian->delete();
 
-        return view('welcome');
+        return redirect(route('ujian_index'));
     }
 }
