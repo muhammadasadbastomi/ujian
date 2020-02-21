@@ -14,7 +14,7 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col" class="text-center">No1</th>
+                            <th scope="col" class="text-center">No</th>
                             <th scope="col" class="text-center">Nama</th>
                             <th scope="col" class="text-center">Foto</th>
                             <th scope="col" class="text-center">NPM</th>
