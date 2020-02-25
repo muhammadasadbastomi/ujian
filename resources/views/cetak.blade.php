@@ -77,27 +77,27 @@
 <body>
     <div class="container">
         <div class="isi">
-            <h2 style="text-align:center;">LAPORAN LABORATORIUM</h2>
+            <h2 style="text-align:center;">LAPORAN SERVICE KENDARAAN</h2>
             <table class="table">
                         <thead>
                         <tr>
                             <th class="text-center" scope="col">No</th>
-                            <th class="text-center" scope="col">Nama</th>
-                            <th class="text-center" scope="col">Foto</th>
-                            <th class="text-center" scope="col">NPM</th>
-                            <th class="text-center" scope="col">Kelas</th>
-                            <th class="text-center" scope="col">Semester</th>
+                            <th class="text-center" scope="col">Merk</th>
+                            <th class="text-center" scope="col">Type</th>
+                            <th class="text-center" scope="col">Sparepart</th>
+                            <th class="text-center" scope="col">Biaya</th>
+                            {{-- <th class="text-center" scope="col">Semester</th> --}}
                             </tr>
                         </thead>
                         <tbody>
                         @foreach( $ujian as $u)
                         <tr>
                             <td>{{$loop->iteration}}</td>
-                            <td>{{$u->nama}}</td>
-                            <td><img src="img/ujian/{{$u->foto}}" width="40" class="rounded-circle" alt="Cinque Terre"></td>
-                            <td>{{$u->NPM}}</td>
-                            <td>{{$u->kelas}}</td>
-                            <td>{{$u->semester}}</td>
+                            <td>{{$u->merk}}</td>
+                            {{-- <td><img src="img/ujian/{{$u->foto}}" width="40" class="rounded-circle" alt="Cinque Terre"></td> --}}
+                            <td>{{$u->type}}</td>
+                            <td>{{$u->sparepart}}</td>
+                            <td>{{$u->biaya}}</td>
                         </tr>
                         @endforeach
                         </tbody>

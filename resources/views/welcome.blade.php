@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card" >
-                <div class="card-header">Data -
+                <div class="card-header">Data Service Kendaraan
                     <div class="text-right">
                         <a href="cetak" class="btn btn-primary"> cetak data</a>
                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">+ tambah data</button>                    </div>
@@ -15,11 +15,11 @@
                     <thead>
                         <tr>
                             <th scope="col" class="text-center">No</th>
-                            <th scope="col" class="text-center">Nama</th>
-                            <th scope="col" class="text-center">Foto</th>
-                            <th scope="col" class="text-center">NPM</th>
-                            <th scope="col" class="text-center">Kelas</th>
-                            <th scope="col" class="text-center">Semester</th>
+                            <th scope="col" class="text-center">Merk</th>
+                            <th scope="col" class="text-center">Type</th>
+                            <th scope="col" class="text-center">Sparepart</th>
+                            <th scope="col" class="text-center">Biaya</th>
+                            {{-- <th scope="col" class="text-center">Semester</th> --}}
                             <th scope="col" class="text-center">Aksi</th>
                         </tr>
                     </thead>
@@ -27,11 +27,11 @@
                         @foreach( $ujian as $u)
                         <tr>
                             <td class="text-center">{{$loop->iteration}}</td>
-                            <td class="text-center">{{$u->nama}}</td>
-                            <td class="text-center"><img src="img/ujian/{{$u->foto}}" width="40" class="rounded-circle" alt="Cinque Terre"></td>
-                            <td class="text-center">{{$u->NPM}}</td>
-                            <td class="text-center">{{$u->kelas}}</td>
-                            <td class="text-center">{{$u->semester}}</td>
+                            <td class="text-center">{{$u->merk}}</td>
+                            {{-- <td class="text-center"><img src="img/ujian/{{$u->foto}}" width="40" class="rounded-circle" alt="Cinque Terre"></td> --}}
+                            <td class="text-center">{{$u->type}}</td>
+                            <td class="text-center">{{$u->sparepart}}</td>
+                            <td class="text-center">{{$u->biaya}}</td>
                             <td class="text-center">
                                 <a class="btn btn-info" href="edit/{{$u->id}}">Edit</a>
                                 <a class="btn btn-danger" href="hapus/{{$u->id}}">Hapus</a>
@@ -59,11 +59,11 @@
       <div class="modal-body">
       <form action="" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
-            <div class="form-group"><label for="nama" class="form-control-label">Nama</label><input type="text" name="nama" id="nama" placeholder="nama" class="form-control"></div>
-            <div class="form-group"><label for="nama" class="form-control-label">NPM</label><input type="text" name="NPM" id="NPM" placeholder="NPM" class="form-control"></div>
-            <div class="form-group"><label for="nama" class="form-control-label">Foto</label><input type="file" name="foto" id="foto" placeholder="foto" class="form-control"></div>
-            <div class="form-group"><label for="nama" class="form-control-label">kelas</label><input type="number" name="kelas" id="kelas" placeholder="kelas" class="form-control"></div>
-            <div class="form-group"><label for="nama" class="form-control-label">Semester</label><input type="number" name="semester" id="semester" placeholder="semester" class="form-control"></div>
+            <div class="form-group"><label for="nama" class="form-control-label">Merk</label><input type="text" name="merk" id="merk" placeholder="merk" class="form-control"></div>
+            <div class="form-group"><label for="nama" class="form-control-label">Type</label><input type="text" name="type" id="type" placeholder="type" class="form-control"></div>
+            {{-- <div class="form-group"><label for="nama" class="form-control-label">Foto</label><input type="file" name="foto" id="foto" placeholder="foto" class="form-control"></div> --}}
+            <div class="form-group"><label for="nama" class="form-control-label">Sparepart</label><input type="text" name="sparepart" id="sparepart" placeholder="sparepart" class="form-control"></div>
+            <div class="form-group"><label for="nama" class="form-control-label">Biaya</label><input type="text" name="biaya" id="biaya" placeholder="biaya" class="form-control"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

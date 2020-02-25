@@ -23,20 +23,20 @@ class UjianController extends Controller
         $ujian = ujian::create($req->all());
 
         // comment this code if foto not used
-        $ujian_id = $ujian->id;
-        $setuuid = ujian::findOrFail($ujian_id);
-        if($req->foto != null)
-        {
-            $img = $req->file('foto');
-            $FotoExt  = $img->getClientOriginalExtension();
-            $FotoName = $ujian_id;
-            $foto   = $FotoName.'.'.$FotoExt;
-            $img->move('img/ujian', $foto);
-            $setuuid->foto       = $foto;
-        }else{
-            $setuuid->foto       = $setuuid->foto;
-        }
-        $setuuid->update();
+        // $ujian_id = $ujian->id;
+        // $setuuid = ujian::findOrFail($ujian_id);
+        // if($req->foto != null)
+        // {
+        //     $img = $req->file('foto');
+        //     $FotoExt  = $img->getClientOriginalExtension();
+        //     $FotoName = $ujian_id;
+        //     $foto   = $FotoName.'.'.$FotoExt;
+        //     $img->move('img/ujian', $foto);
+        //     $setuuid->foto       = $foto;
+        // }else{
+        //     $setuuid->foto       = $setuuid->foto;
+        // }
+        // $setuuid->update();
 
         return redirect(route('ujian_index'));
     }
@@ -47,17 +47,17 @@ class UjianController extends Controller
         $ujian->fill($req->all())->save();
 
         // comment this code if foto not used
-        if($req->foto != null){
-                $FotoExt  = $req->foto->getClientOriginalExtension();
-                $FotoName = $req->ujian_id;
-                $foto   = $FotoName.'.'.$FotoExt;
-                $req->foto->move('img/ujian', $foto);
-                $ujian->foto       = $foto;
-                }else {
-                    $ujian->foto  = $ujian->foto;
-                }
+        // if($req->foto != null){
+        //         $FotoExt  = $req->foto->getClientOriginalExtension();
+        //         $FotoName = $req->ujian_id;
+        //         $foto   = $FotoName.'.'.$FotoExt;
+        //         $req->foto->move('img/ujian', $foto);
+        //         $ujian->foto       = $foto;
+        //         }else {
+        //             $ujian->foto  = $ujian->foto;
+        //         }
 
-        $ujian->update();
+        // $ujian->update();
 
         return redirect(route('ujian_index'));
     }
