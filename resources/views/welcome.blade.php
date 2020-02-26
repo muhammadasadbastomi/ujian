@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card" >
-                <div class="card-header">Data Desa
+                <div class="card-header">Data 1s
                     <div class="text-right">
                         <a href="cetak" class="btn btn-primary"> cetak data</a>
                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">+ tambah data</button>                    </div>
