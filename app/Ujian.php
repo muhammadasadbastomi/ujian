@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ujian extends Model
 {
-    protected $fillable = ['id_desa','nama', 'kecamatan', 'kabupaten'];
+    protected $fillable = ['npm','nama', 'prodi', 'fakultas','no_hp'];
 }

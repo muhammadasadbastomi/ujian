@@ -77,31 +77,33 @@
 <body>
     <div class="container">
         <div class="isi">
-            <h2 style="text-align:center;">LAPORAN DESA</h2>
-            <table class="table">
-                        <thead>
+            <h2 style="text-align:center;">LAPORAN MAHASISWA</h2>
+            <table class="table table-striped">
+                    <thead>
                         <tr>
-                            <th class="text-center" scope="col">No</th>
-                            <th class="text-center" scope="col">Id Desa</th>
-                            <th class="text-center" scope="col">Nama Desa</th>
-                            <th class="text-center" scope="col">Kecamatan</th>
-                            <th class="text-center" scope="col">Kabupaten</th>
-                            {{-- <th class="text-center" scope="col">Semester</th> --}}
-                            </tr>
-                        </thead>
-                        <tbody>
+                            <th scope="col" class="text-center">No</th>
+                            <th scope="col" class="text-center">npm</th>
+                            <th scope="col" class="text-center">Nama </th>
+                            <th scope="col" class="text-center">no hp</th>
+                            <th scope="col" class="text-center">Prodi</th>
+                            <th scope="col" class="text-center">Fakultas</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
                         @foreach( $ujian as $u)
                         <tr>
-                            <td>{{$loop->iteration}}</td>
-                            <td>{{$u->id_desa}}</td>
-                            {{-- <td><img src="img/ujian/{{$u->foto}}" width="40" class="rounded-circle" alt="Cinque Terre"></td> --}}
-                            <td>{{$u->nama}}</td>
-                            <td>{{$u->kecamatan}}</td>
-                            <td>{{$u->kabupaten}}</td>
+                            <td class="text-center">{{$loop->iteration}}</td>
+                            <td class="text-center">{{$u->npm}}</td>
+                            {{-- <td class="text-center"><img src="img/ujian/{{$u->foto}}" width="40" class="rounded-circle" alt="Cinque Terre"></td> --}}
+                            <td class="text-center">{{$u->nama}}</td>
+                            <td class="text-center">{{$u->no_hp}}</td>
+                            <td class="text-center">{{$u->prodi}}</td>
+                            <td class="text-center">{{$u->fakultas}}</td>
+                           
                         </tr>
                         @endforeach
-                        </tbody>
-                    </table>
+                    </tbody>
+                </table>
                       <br>
 
                     </div>
