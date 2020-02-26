@@ -77,15 +77,15 @@
 <body>
     <div class="container">
         <div class="isi">
-            <h2 style="text-align:center;">LAPORAN SERVICE KENDARAAN</h2>
+            <h2 style="text-align:center;">LAPORAN DESA</h2>
             <table class="table">
                         <thead>
                         <tr>
                             <th class="text-center" scope="col">No</th>
-                            <th class="text-center" scope="col">Merk</th>
-                            <th class="text-center" scope="col">Type</th>
-                            <th class="text-center" scope="col">Sparepart</th>
-                            <th class="text-center" scope="col">Biaya</th>
+                            <th class="text-center" scope="col">Id Desa</th>
+                            <th class="text-center" scope="col">Nama Desa</th>
+                            <th class="text-center" scope="col">Kecamatan</th>
+                            <th class="text-center" scope="col">Kabupaten</th>
                             {{-- <th class="text-center" scope="col">Semester</th> --}}
                             </tr>
                         </thead>
@@ -93,11 +93,11 @@
                         @foreach( $ujian as $u)
                         <tr>
                             <td>{{$loop->iteration}}</td>
-                            <td>{{$u->merk}}</td>
+                            <td>{{$u->id_desa}}</td>
                             {{-- <td><img src="img/ujian/{{$u->foto}}" width="40" class="rounded-circle" alt="Cinque Terre"></td> --}}
-                            <td>{{$u->type}}</td>
-                            <td>{{$u->sparepart}}</td>
-                            <td>{{$u->biaya}}</td>
+                            <td>{{$u->nama}}</td>
+                            <td>{{$u->kecamatan}}</td>
+                            <td>{{$u->kabupaten}}</td>
                         </tr>
                         @endforeach
                         </tbody>
