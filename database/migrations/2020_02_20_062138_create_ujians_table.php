@@ -15,7 +15,7 @@ class CreateUjiansTable extends Migration
     {
         Schema::create('ujians', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('npm');
+            $table->string('nim');
             $table->string('nama');
             $table->string('prodi');
             $table->string('fakultas');
