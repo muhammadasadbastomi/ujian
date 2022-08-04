@@ -34,7 +34,7 @@
                                         <td class="text-center">{{ $u->alamat }}</td>
                                         <td class="text-center">{{ $u->buku }}</td>
                                         <td class="text-center">
-                                            <a class="btn btn-info" href="edit/{{ $u->id }}">Edit</a>
+                                            {{-- <a class="btn btn-info" href="edit/{{ $u->id }}">Edit</a> --}}
                                             <a class="btn btn-danger" href="hapus/{{ $u->id }}">Hapus</a>
                                         </td>
                                     </tr>
