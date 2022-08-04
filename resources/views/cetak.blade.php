@@ -24,7 +24,7 @@
         }
 
         th {
-            background-color: darkslategray;
+            background-color: rgb(154, 151, 151);
             text-align: center;
             color: aliceblue;
         }
@@ -95,28 +95,26 @@
 <body>
     <div class="container">
         <div class="isi">
-            <h2 style="text-align:center;">LAPORAN MAHASISWA</h2>
+            <h2 style="text-align:center;">LAPORAN BUKU</h2>
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col" class="text-center">No</th>
-                        <th scope="col" class="text-center">nim</th>
-                        <th scope="col" class="text-center">Nama </th>
-                        <th scope="col" class="text-center">no_hp</th>
-                        <th scope="col" class="text-center">Prodi</th>
-                        <th scope="col" class="text-center">Fakultas</th>
+                        <th scope="col" class="text-center">Nama Anggota</th>
+                        <th scope="col" class="text-center">Id Anggota</th>
+                        <th scope="col" class="text-center">alamat Anggota</th>
+                        <th scope="col" class="text-center">Buku yang Dipinjam</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($ujian as $u)
                         <tr>
                             <td class="text-center">{{ $loop->iteration }}</td>
-                            <td class="text-center">{{ $u->nim }}</td>
                             {{-- <td class="text-center"><img src="img/ujian/{{$u->foto}}" width="40" class="rounded-circle" alt="Cinque Terre"></td> --}}
                             <td class="text-center">{{ $u->nama }}</td>
-                            <td class="text-center">{{ $u->no_hp }}</td>
-                            <td class="text-center">{{ $u->prodi }}</td>
-                            <td class="text-center">{{ $u->fakultas }}</td>
+                            <td class="text-center">{{ $u->id_anggota }}</td>
+                            <td class="text-center">{{ $u->alamat }}</td>
+                            <td class="text-center">{{ $u->buku }}</td>
 
                         </tr>
                     @endforeach

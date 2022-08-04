@@ -17,11 +17,10 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="text-center">No</th>
-                                    <th scope="col" class="text-center">nim</th>
-                                    <th scope="col" class="text-center">Nama </th>
-                                    <th scope="col" class="text-center">no_hp</th>
-                                    <th scope="col" class="text-center">Prodi</th>
-                                    <th scope="col" class="text-center">Fakultas</th>
+                                    <th scope="col" class="text-center">Id Anggota</th>
+                                    <th scope="col" class="text-center">Nama Anggota</th>
+                                    <th scope="col" class="text-center">alamat Anggota</th>
+                                    <th scope="col" class="text-center">Buku yang Dipinjam</th>
                                     <th scope="col" class="text-center">Aksi</th>
                                 </tr>
                             </thead>
@@ -29,12 +28,11 @@
                                 @foreach ($ujian as $u)
                                     <tr>
                                         <td class="text-center">{{ $loop->iteration }}</td>
-                                        <td class="text-center">{{ $u->nim }}</td>
                                         {{-- <td class="text-center"><img src="img/ujian/{{$u->foto}}" width="40" class="rounded-circle" alt="Cinque Terre"></td> --}}
+                                        <td class="text-center">{{ $u->id_anggota }}</td>
                                         <td class="text-center">{{ $u->nama }}</td>
-                                        <td class="text-center">{{ $u->no_hp }}</td>
-                                        <td class="text-center">{{ $u->prodi }}</td>
-                                        <td class="text-center">{{ $u->fakultas }}</td>
+                                        <td class="text-center">{{ $u->alamat }}</td>
+                                        <td class="text-center">{{ $u->buku }}</td>
                                         <td class="text-center">
                                             <a class="btn btn-info" href="edit/{{ $u->id }}">Edit</a>
                                             <a class="btn btn-danger" href="hapus/{{ $u->id }}">Hapus</a>
@@ -63,23 +61,21 @@
                 <div class="modal-body">
                     <form action="" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        <div class="form-group"><label class="form-control-label">NIM</label>
-                            <input type="text" name="nim" placeholder="NIM" class="form-control">
-                        </div>
-                        <div class="form-group"><label class="form-control-label">Nama </label>
+
+                        <div class="form-group"><label class="form-control-label">Nama Anggota </label>
                             <input type="text" name="nama" placeholder="nama" class="form-control">
+                        </div>
+                        <div class="form-group"><label class="form-control-label">Id Anggota </label>
+                            <input type="text" name="id_anggota" placeholder="id_anggota" class="form-control">
                         </div>
                         {{-- <div class="form-group"><label  class="form-control-label">Foto</label>
                           <input type="file" name="foto"  placeholder="foto" class="form-control">
                         </div> --}}
-                        <div class="form-group"><label class="form-control-label">no_hp</label>
-                            <input type="text" name="no_hp" placeholder="no_hp" class="form-control">
+                        <div class="form-group"><label class="form-control-label">alamat Anggota</label>
+                            <input type="text" name="alamat" placeholder="alamat" class="form-control">
                         </div>
-                        <div class="form-group"><label class="form-control-label">Prodi</label>
-                            <input type="text" name="prodi" placeholder="prodi" class="form-control">
-                        </div>
-                        <div class="form-group"><label class="form-control-label">Fakultas</label>
-                            <input type="text" name="fakultas" placeholder="fakultas" class="form-control">
+                        <div class="form-group"><label class="form-control-label">Buku yang Dipinjam</label>
+                            <input type="text" name="buku" placeholder="buku" class="form-control">
                         </div>
                 </div>
                 <div class="modal-footer">

@@ -15,11 +15,10 @@ class CreateUjiansTable extends Migration
     {
         Schema::create('ujians', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nim');
             $table->string('nama');
-            $table->string('prodi');
-            $table->string('fakultas');
-            $table->string('no_hp');
+            $table->string('id_anggota');
+            $table->string('buku');
+            $table->string('alamat');
             // $table->string('foto')->length(100)->nullable();
             $table->timestamps();
         });
